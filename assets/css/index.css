@@ -1,0 +1,636 @@
+header {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+
+}
+
+#hotspot-pic {
+    vertical-align: middle;
+    border-style: none;
+    width: 75vw;
+    height: 150vh;
+    position: relative;
+    bottom: 70vh;
+    right: 5vw;
+    background-image: url(/assets/images/busker-feet-guitar-black-unsplash.jpg);
+}
+
+
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+#mute {
+    z-index: 2147483647;
+    cursor: pointer;
+    height: 60px;
+    width: 50px;
+    position: absolute;
+    top: 90%;
+    right: 30px;
+    background-size: cover;
+}
+
+
+/*Slant right div*/
+
+.slant-right {
+    transform: rotateZ(10deg);
+    -ms-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(10deg);
+    -o-transform: rotateZ(10deg);
+}
+
+/*Map pointers*/
+
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+/*nav bar Scroll down*/
+.pb_navbar {
+    z-index: 9999999999999999;
+}
+
+/*Typewriter effect*/
+
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Home Button Get started*/
+
+.btn {
+    border-radius: 40px;
+    padding: 20px 30px;
+    font-size: 14px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn.btn-primary {
+    background: #28CC9E;
+    border-color: #28CC9E;
+    color: #fff;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active {
+    background: #4bdcb3;
+}
+
+.btn.btn-outline-white {
+    border-color: #fff;
+    background: none;
+}
+
+.btn.btn-outline-white:hover,
+.btn.btn-outline-white:focus,
+.btn.btn-outline-white:active {
+    background: #fff;
+    color: #000;
+}
+
+/*Cover Scroll Down Video carosal*/
+
+.cover_nav {
+    position: relative;
+    bottom: 0;
+    z-index: 999;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    top: -40px;
+}
+
+.cover_nav .cover_dots {
+    padding: 15px 90px;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+    width: auto;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    background-color: #ffffff;
+    top: -14px;
+    border-top-left-radius: 51px;
+    border-top-right-radius: 51px;
+}
+
+.cover_nav .cover_dots:before {
+    content: " ";
+    display: block;
+    z-index: 99999;
+    position: absolute;
+    left: -30px;
+    bottom: 0;
+    top: 21px;
+    border-top-left-radius: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid white;
+    border-left: 40px solid transparent;
+}
+
+.cover_nav .cover_dots:after {
+    content: " ";
+    display: block;
+    z-index: 99999;
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    top: 21px;
+    border-top-left-radius: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid #ffffff;
+    border-right: 40px solid transparent;
+}
+
+div#map {
+    height: 90vh;
+    width: 100%;
+}
+
+.maps-hero_container {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+div#legends {
+    padding-bottom: 2%;
+}
+
+/*Hotspots search link*/
+a#hotspot-landmark-search {
+    color: inherit;
+    text-decoration-style: none;
+    text-decoration: none;
+}
+
+a#hotspots-reset {
+    color: inherit;
+    text-decoration-style: none;
+    text-decoration: none;
+}
+
+button#hotspots-reset {
+    margin: 10%;
+}
+
+button#hotspot-landmark-search {
+    margin: 10%;
+}
+
+
+/*Scroll to top*/
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 999999999999999999999999999999999;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+a.navbar-brand {
+    color: white;
+}
+
+.cover-bg-indigo:before {
+    background: #0e0712;
+    ;
+}
+
+div#content {
+    z-index: 9;
+}
+
+div#hotspot-content {
+    position: relative;
+    bottom: 12vh;
+}
+
+.pb_footer {
+    padding: 6em 0;
+}
+
+a#hotspots-more_info {
+    margin: 10px;
+}
+
+a#hotspots-go_live {
+    margin: 10px;
+}
+
+/*Tablet*/
+@media only screen and (max-width: 1000px) and (min-width: 701px) {
+    #hotspot-pic {
+        display: none;
+    }
+
+}
+
+p {
+    margin: 7px 0;
+}
+
+#section-faq li {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-indent: -1em;
+    padding-left: 1em;
+}
+
+/*Hotspots parking checkbox*/
+
+/* .slideThree */
+.slideThree {
+    width: 80px;
+    height: 26px;
+    background: #333;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.slideThree:after {
+    content: 'OFF';
+    color: #000;
+    position: absolute;
+    right: 10px;
+    z-index: 0;
+    font: 12px/26px Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+}
+
+.slideThree:before {
+    content: 'ON';
+    color: #27ae60;
+    position: absolute;
+    left: 10px;
+    z-index: 0;
+    font: 12px/26px Arial, sans-serif;
+    font-weight: bold;
+}
+
+.slideThree label {
+    display: block;
+    width: 34px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 1;
+    background: #fcfff4;
+    background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.slideThree input[type=checkbox] {
+    visibility: hidden;
+}
+
+.slideThree input[type=checkbox]:checked + label {
+    left: 43px;
+}
+
+/* end .slideThree */
+
+#maps-hero_container.row {
+    align-items: center;
+}
+
+div#parking-label {
+    margin: 5%;
+}
+
+div#parking-radio {
+    margin: 5%;
+}
+
+div#prediction-label {
+    margin: 5%;
+}
+
+div#prediction-radio {
+    margin: 5%;
+}
+
+div#timeSlider-label {
+    margin: 5%;
+}
+
+div#timeSlider-radio {
+    margin: 5%;
+    margin-top: -5%;
+}
+
+/* Tooltip CSS */
+[data-md-tooltip] {
+    position: relative;
+}
+
+[data-md-tooltip]:before {
+    content: attr(data-md-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    padding: 8px;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: top;
+    background: #616161e6;
+    color: white;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+[data-md-tooltip]:hover:before {
+    transform: translateX(-50%) scale(1);
+}
+
+[data-md-tooltip].md-tooltip--right:before {
+    left: auto;
+    right: -10px;
+    bottom: auto;
+    top: 50%;
+    transform: translate(100%, -50%) scale(0);
+    transform-origin: left center;
+}
+
+[data-md-tooltip].md-tooltip--right:hover:before {
+    transform: translate(100%, -50%) scale(1);
+}
+
+[data-md-tooltip].md-tooltip--left:before {
+    left: -15px;
+    right: auto;
+    bottom: auto;
+    top: 50%;
+    transform: translate(-100%, -50%) scale(0);
+    transform-origin: right center;
+}
+
+[data-md-tooltip].md-tooltip--left:hover:before {
+    transform: translate(-100%, -50%) scale(1);
+}
+
+[data-md-tooltip].md-tooltip-disabled:before {
+    display: none;
+}
+
+.md-tooltip--top:before {
+    top: -40px;
+    bottom: auto;
+    transform: translateX(-50%) scale(0);
+    transform-origin: bottom center;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 120%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+div#timeSlider-radio {
+    position: relative;
+    left: -10%;
+}
+
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+input#myRanges {
+    width: 100%;
+    position: relative;
+}
+
+.box{
+    background-color: #333333;
+    height: 45px;
+    width: 45px;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(-135deg);
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: -10px;
+    z-index: 1;
+}
+
+#value{
+    color: white;
+    font-size: 23px;
+    transform: rotate(135deg);
+    position: relative;
+    top: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*Mobile*/
+@media screen and (max-width: 700px) {
+
+    #mute {
+        z-index: 999999;
+        background-repeat: no-repeat;
+        background-size: 35px;
+        width: 10px;
+        height: 10px;
+        top: 83%;
+        right: 1%;
+        cursor: pointer;
+    }
+
+    span#typed {
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+    }
+
+    #hotspot-pic {
+        display: none;
+    }
+
+
+}

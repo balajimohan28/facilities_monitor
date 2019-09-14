@@ -1,0 +1,29 @@
+#map {
+    height: 75vh;
+    width: 100%;
+    top: 5%;
+    bottom: 5%;
+}
+
+table thead {
+    display: block;
+}
+
+table tbody {
+    height: 300px;
+    width: 100%;
+    overflow-y: auto;
+    display: block;
+}
+
+th {
+    text-align: justify-all;
+    position: relative;
+    left: 8vw;
+}
+
+.pb_form_v1 {
+    padding: 25px;
+    margin-top: 15%;
+}
+

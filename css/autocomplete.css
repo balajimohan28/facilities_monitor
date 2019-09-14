@@ -1,0 +1,101 @@
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+
+/* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+* html .ui-autocomplete {
+    height: 100px;
+}
+
+.ui-widget.ui-widget-content {
+    border: 1px solid #c5c5c5;
+    border-radius: 50px 50px 50px;
+    background: #ffffff;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+.ui-menu .ui-menu-item {
+    /* styles */
+
+
+}
+
+.ui-widget input {
+    /* styles */
+
+}
+
+.ui-widget label {
+    /* styles */
+
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background: red;
+    color: red;
+}
+
+/*
+.ui-autocomplete-input:focus, .ui-autocomplete a.ui-corner-all.sbiAnchor:hover {
+    background: red;
+}
+*/
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 15px 50px 30px;
+    background: #ffffff;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+/* button */
+::-webkit-scrollbar-button {
+    visibility: hidden;
+    border-radius: 50px 50px 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e86ed0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e86ed0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    visibility: hidden;
+}
+
+/* The track NOT covered by the handle.
+::-webkit-scrollbar-track-piece {
+    background: #000;
+}
+ 
+/* Corner */
+::-webkit-scrollbar-corner {
+    background: #999;
+}
+
+/* Resizer */
+::-webkit-resizer {
+    background: #999;
+}
