@@ -8246,6 +8246,10 @@ h1, h2, h3, h4, h5,
     color: #ffffff;
     line-height: 1.1;
     font-weight: 400; }
+
+    h1#soon_h1 {
+        background-color: #e86ed0;
+    }
     .slider-text h1 span {
       display: block; }
   .slider-text .icon-wrap .icon {

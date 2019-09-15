@@ -1,5 +1,4 @@
 function addResult(result, i) {
-    var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
     var results = document.getElementById('results');
     var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
     //var markerIcon = MARKER_PATH + markerLetter + '.png';
@@ -19,7 +18,7 @@ function addResult(result, i) {
     btn.innerHTML = "Info";
     btn.id = i;
     btn.onclick = function () {
-        window.location.href = "Search.html?facility_id=" + result.facility_id + "&jurisdiction_code=" + result.jurisdiction_code + "&jurisdiction_facility_id=" + result.jurisdiction_facility_id + "&registered_business_name=" + result.registered_business_name + "&facility_name=" + result.facility_name + "&street_address=" + result.street_address + "&suburb=" + result.suburb + "&postcode=" + result.postcode + "&primary_anzsic_class_code=" + result.primary_anzsic_class_code + "&primary_anzsic_class_name=" + result.primary_anzsic_class_name + "&main_activities=" + result.main_activities + "&reports=" + result.reports;
+        window.location.href = "Search.html?facility_id=" + result.facility_id + "&jurisdiction_code=" + result.jurisdiction_code + "&jurisdiction_facility_id=" + result.jurisdiction_facility_id + "&registered_business_name=" + result.registered_business_name + "&facility_name=" + result.facility_name + "&street_address=" + result.street_address + "&suburb=" + result.suburb + "&postcode=" + result.postcode + "&primary_anzsic_class_code=" + result.primary_anzsic_class_code + "&primary_anzsic_class_name=" + result.primary_anzsic_class_name + "&main_activities=" + result.main_activities + "&reports=" + result.reports + "&Total_Land_Waste_Amount=" + result.Total_Land_Waste_Amount + "&Total_Air_Point_Waste_Amount=" + result.Total_Air_Point_Waste_Amount + "&Total_Air_Fugitive_Waste_Amount=" + result.Total_Air_Fugitive_Waste_Amount+ "&Total_Air_Waste_Amount=" + result.Total_Air_Waste_Amount + "&Total_Water_Waste_Amount=" + result.Total_Water_Waste_Amount;
     };
     icon.src = markerIcon;
     icon.setAttribute('class', 'placeIcon');
@@ -42,7 +41,6 @@ function clearResults() {
     }
 }
 
-
 function initMap() {
 
     var melbourne = new google.maps.LatLng(-37.809954, 144.962886);
@@ -61,28 +59,33 @@ function initMap() {
 }
 
 // Data base Fetch
-const url = 'https://raw.githubusercontent.com/balajimohan28/justnowastesample/master/csvjson.json';
+const url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/facility_NPI.json';
 var latitude;
 var longitude;
 fetch(url)
     .then(res => res.json())
-    .then(function (data) {
+    .then(function (datas) {
 
         var currentLocation = window.location;
 
         var url = new URL(currentLocation);
         var mySuburb = url.searchParams.get("mySuburb");
+    
+        var data = datas.facility;
+    
+        var data_filter = data.filter(element => element.suburb.toLowerCase() == mySuburb.toLowerCase())
 
-
-        var melbourne = new google.maps.LatLng(-37.809954, 144.962886);
+        var newLocation = new google.maps.LatLng(data_filter[0].latitude, data_filter[0].longitude);
         var mapOptions = {
-            zoom: 10,
-            center: melbourne
+            zoom: 14,
+            center: newLocation
         }
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-        var data_filter = data.filter(element => element.suburb.toLowerCase() == mySuburb.toLowerCase())
-
+        
+        
+        document.getElementById("company_name").innerHTML = data_filter[0].suburb;
+        
         for (var p = 0; p < data_filter.length; p++) {
 
             addResult(data_filter[p], p);

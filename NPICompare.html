@@ -57,93 +57,37 @@
     </nav>
     <!-- END nav -->
 
-
-    <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/industry-street-unsplash.jpg');" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-                <div class="col-md-9 ftco-animate pb-5 text-center">
-                    <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a><span class="mr-2"><a href="javascript:history.back()">Suburb <i class="ion-ios-arrow-forward"></i></a></span> <span>Findings <i class="ion-ios-arrow-forward"></i></span></p>
-                    <h1 class="mb-3 bread">Findings of Company Information</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="hero-wrap hero-wrap-2" id="CompanyInfoSection">
         <div class="container-fluid d-flex h-100">
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" id="table-container">
+            <div class="col-lg-8 col-md-6 col-sm-6 col-xs-6" id="table-container">
+                <h1 id="company_name" style="text-align: center"></h1>
                 <table class="table table-striped table-dark">
                     <thead class="text-center" id="results-heading">
                         <tr>
-                            <th scope="col">Column Name</th>
-                            <th scope="col">Details</th>
+                            <th scope="col">Substance Name</th>
+                            <th scope="col">Category</th>
                         </tr>
                     </thead>
                     <tbody class="text-center" id="results"></tbody>
                 </table>
-                <!------------------------------------------------------------------------------------------->
-
-
-                <!-- Button trigger modal -->
-                
-<!--
                 <div class="form-group text-center">
-                    <button id="NPI-Category" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                        Launch demo modal
-                    </button>
-                </div>-->
-
-
-                <!--
-                <a id="modalPopper" href="#" class="btn">Popup Modal Message</a>
-                <div id="msgModal" class="modal hide fade">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h3></h3>
-                    </div>
-                    <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary callback-btn" data-dismiss="modal">Close</button>
-                    </div>
+                    <button type="button" class="btn btn-lg btn-primary" onclick="window.location.href='/index.html'">Search Again</button>
                 </div>
--->
-                <!-- Modal's toggle button has data that's used to determine what content to use -->
-                <div class="form-group text-center">
-                <button type="button" class="btn btn-lg btn-primary" onclick="ComapreNPI()">Compare NPI Categories</button>
-                     </div>
-
-                <!-- Taken from Bootstrap's documentation -->
-<!--
-                <div class="modal fade">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Modal title</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>One fine body&hellip;</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
+                <div class="form-group text-left">
+                    <p>ANZSIC code is part of NPI reporting requirements and NPI has below six categories</p>
+                    <p>category 1 - emissions and transfers of a substance are reportable under the Category 1 substance usage threshold.</p>
+                    <p>category 1a - emissions and transfers of a substance are reportable under the Category 1a substance usage threshold.</p>
+                    <p>category 1b - emissions and transfers of a substance are reportable under the Category 1b substance usage threshold.</p>
+                    <p>category 2a - emissions of a substance are reportable under the Category 2a fuel usage threshold.</p>
+                    <p>category 2b - emissions of a substance are reportable under the Category 2b fuel usage threshold.</p>
+                    <p>category 3 - emissions and transfers of a substance are reportable under the Category 3 emission threshold.</p>
                 </div>
--->
-                <!-- /.modal -->
-
-
-                <!------------------------------------------------------------------------------------------->
 
             </div>
         </div>
     </section>
+
+
 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
@@ -155,11 +99,11 @@
     <!--    <script src="js/jquery.min.js"></script>-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!--    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>-->
+    <!--    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>-->
 
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
@@ -171,7 +115,8 @@
     <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/search.js"></script>
+    <!--    <script src="js/search.js"></script>-->
+    <script src="js/NPICompare.js"></script>
 </body>
 
 </html>
