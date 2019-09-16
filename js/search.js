@@ -57,9 +57,9 @@ for (var i = 0; i <= 1; i++) {
         var primary_anzsic_class_name_name = document.createTextNode("ANZSIC class name");
         var main_activities_name = document.createTextNode("Main Activities");
         var reports_name = document.createTextNode("No of Reports submitted");
-		var land_waste_name = document.createTextNode("Total Land Waste(kg)");
-		var air_point_waste_name = document.createTextNode("Total Air Point Waste(kg)");
-		var air_fugitive_waste_name = document.createTextNode("Total Air Fugitive Waste (kg)");
+		var land_waste_name = document.createTextNode("Total Land Emission(kg)");
+		var air_point_waste_name = document.createTextNode("Total Air Point Emission(kg)");
+		var air_fugitive_waste_name = document.createTextNode("Total Air Fugitive Emission (kg)");
 		var air_waste_name = document.createTextNode("Total Air Waste(kg)");
 		var water_waste_name = document.createTextNode("Total Water Waste(kg)");
 		
