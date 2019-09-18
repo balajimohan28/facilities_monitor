@@ -3,6 +3,8 @@ var currentLocation = window.location;
 var url = new URL(currentLocation);
 var target = url.searchParams.get("target");
 
+var subString_comp = ""
+
 var url = '';
 
 if (target == "Total_Land_Waste_Amount") {
@@ -35,7 +37,7 @@ fetch(url)
     .then(function (data) {
 
         console.log(data);
-
+        subString_comp = data;
         var currentLocation = window.location;
 
         var url = new URL(currentLocation);
@@ -53,10 +55,16 @@ fetch(url)
             var btn_td = document.createElement('BUTTON');
 
             var subString = data[i].substance_name;
-
+            //subString_comp = subString
             btn_td.id = i;
-            btn_td.onclick = function (data) {
-                window.location.href = "substance.html?substance_name=" + subString;
+            btn_td.onclick = function (event) {
+                //console.log(data)
+                console.log(event)
+                console.log(event.path[0].id)
+                var path_id = event.path[0].id;
+                console.log(parseInt(path_id))
+                console.log(subString_comp[parseInt(path_id)])
+                window.location.href = "substance.html?substance_name=" + subString_comp[parseInt(path_id)].substance_name;
             };
 
             var rank_name = document.createTextNode(i);
