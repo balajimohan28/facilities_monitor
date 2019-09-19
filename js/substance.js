@@ -1,3 +1,22 @@
+var $modal = $('.modal');
+
+// Show loader & then get content when modal is shown
+$modal.on('show.bs.modal', function (e) {
+    var paragraphs = $(e.relatedTarget).data('paragraphs');
+
+    $(this)
+        .addClass('modal-scrollfix')
+        .find('.modal-body')
+        .html('loading...')
+        .load('https://baconipsum.com/api/?type=meat-and-filler&paras=' + paragraphs, function () {
+            
+            $modal
+                .removeClass('modal-scrollfix')
+                .find('.modal-body').text('Hari');
+        });
+
+});
+
 // Data base Fetch
 const url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/substance_impacts.json';
 //const url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/substance_impacts.json';
@@ -9,6 +28,9 @@ fetch(url)
 
         var url = new URL(currentLocation);
         var substance_name = url.searchParams.get("substance_name");
+        var company_name = url.searchParams.get("company_name");
+    
+        document.getElementById("company_name").innerHTML = company_name;
 
         var current_substance_name_arr = substance_name.split(',');
 
@@ -19,10 +41,6 @@ fetch(url)
 
             if (final_filter[0] != null) {
 
-
-
-                console.log(final_filter[0].A);
-                console.log(final_filter[0].B);
                 var sName = final_filter[0].A;
                 var iName = final_filter[0].B;
 
@@ -45,14 +63,22 @@ fetch(url)
 
                 results.appendChild(tr);
 
-
-
             }
         }
-
-
 
     })
     .catch(function (e) {
         console.log("Error:", e);
     });
+
+
+function viewStrategy(){
+
+    var currentLocation = window.location;
+
+    var url = new URL(currentLocation);
+    var company_id = url.searchParams.get("company_id");
+    var company_name = url.searchParams.get("company_name");
+    
+    window.location.href = "Strategy.html?company_id=" + company_id+ "&company_name="+ company_name + "#StrategyInfoSection";    
+}

@@ -64,7 +64,7 @@ fetch(url)
                 var path_id = event.path[0].id;
                 console.log(parseInt(path_id))
                 console.log(subString_comp[parseInt(path_id)])
-                window.location.href = "substance.html?substance_name=" + subString_comp[parseInt(path_id)].substance_name;
+                window.location.href = "substance.html?company_id="+ subString_comp[parseInt(path_id)].facility_id +"&company_name=" + subString_comp[parseInt(path_id)].facility_name +"&substance_name=" + subString_comp[parseInt(path_id)].substance_name;
             };
 
             var rank_name = document.createTextNode(i);
