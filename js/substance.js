@@ -18,7 +18,7 @@ $modal.on('show.bs.modal', function (e) {
 });
 
 // Data base Fetch
-const url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/substance_impacts.json';
+const url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/substance_impacts.json';
 //const url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/substance_impacts.json';
 fetch(url)
     .then(res => res.json())

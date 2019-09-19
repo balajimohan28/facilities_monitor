@@ -8,26 +8,26 @@ var subString_comp = ""
 var url = '';
 
 if (target == "Total_Land_Waste_Amount") {
-    var url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/Total_Land_Waste_Amount.json';
+    var url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/Total_Land_Waste_Amount.json';
     document.getElementById("class-name").innerHTML = "Land Waste";
 } else if (target == "Total_Air_Fugitive_Waste_Amount") {
-    var url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/Total_Air_Fugitive_Waste_Amount.json';
+    var url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/Total_Air_Fugitive_Waste_Amount.json';
     document.getElementById("class-name").innerHTML = "Air Fugitive Waste";
 
 } else if (target == "Total_Air_Point_Waste_Amount") {
-    var url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/Total_Air_Point_Waste_Amount.json';
+    var url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/Total_Air_Point_Waste_Amount.json';
     document.getElementById("class-name").innerHTML = "Air Point Waste";
 
 } else if (target == "Total_Air_Waste_Amount") {
-    var url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/Total_Air_Waste_Amount.json';
+    var url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/Total_Air_Waste_Amount.json';
     document.getElementById("class-name").innerHTML = "Air Waste";
 
 } else if (target == "Total_Water_Waste_Amount") {
-    var url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/Total_Water_Waste_Amount.json';
+    var url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/Total_Water_Waste_Amount.json';
     document.getElementById("class-name").innerHTML = "Water Waste";
 
 } else {
-    var url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/Total_Land_Waste_Amount.json';
+    var url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/Total_Land_Waste_Amount.json';
     document.getElementById("class-name").innerHTML = "Land Waste";
 }
 
@@ -35,8 +35,7 @@ if (target == "Total_Land_Waste_Amount") {
 fetch(url)
     .then(res => res.json())
     .then(function (data) {
-
-        console.log(data);
+        
         subString_comp = data;
         var currentLocation = window.location;
 

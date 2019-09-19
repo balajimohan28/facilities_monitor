@@ -8,7 +8,7 @@ $modal.on('show.bs.modal', function (e) {
         .addClass('modal-scrollfix')
         .find('.modal-body')
         .html('loading...')
-        .load('https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/facilities_strategies.json', function (extra) {
+        .load('https://just-no-waste.s3-ap-southeast-2.amazonaws.com/facilities_strategies.json', function (extra) {
 
             var currentLocation = window.location;
 
@@ -37,7 +37,7 @@ $modal.on('show.bs.modal', function (e) {
 
 
 // Data base Fetch
-const url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/facilities_strategies.json';
+const url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/facilities_strategies.json';
 fetch(url)
     .then(res => res.json())
     .then(function (datas) {

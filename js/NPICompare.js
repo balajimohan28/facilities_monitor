@@ -25,7 +25,7 @@ function clearResults() {
 
 
 // Data base Fetch
-const url = 'https://raw.githubusercontent.com/balajimohan28/JustNoWasteDataSet/master/facility_NPI.json';
+const url = 'https://just-no-waste.s3-ap-southeast-2.amazonaws.com/facility_NPI.json';
 fetch(url)
     .then(res => res.json())
     .then(function (datas) {
